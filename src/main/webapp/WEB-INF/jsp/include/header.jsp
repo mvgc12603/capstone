@@ -31,7 +31,7 @@
                     <a class="nav-link text-center" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-center" href="/speakers/speaker">Speakers</a>
+                    <a class="nav-link text-center" href="/speakers/">Speakers</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-center" href="/resource" id="resourcesDropdown" role="button"

@@ -23,7 +23,7 @@
         <div class="card-body">
             <h3 class="speaker-title">Speaker</h3>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><a href="../speakers/speakerDetails">Learn More</a></div>
+            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
 <%--  How it should be done:          <a href="/employee/details?employeeId=${employee.id}">See Customers</a>--%>
             <button type="button" class="speaker-contact">Contact</button>
         </div>
@@ -50,7 +50,7 @@
         <div class="card-body">
             <h3 class="speaker-title">Speaker</h3>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><a href="../speakers/speakerDetails">Learn More</a></div>
+            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
             <button type="button" class="speaker-contact">Contact</button>
         </div>
     </div>
@@ -66,7 +66,7 @@
         <div class="card-body">
             <h3 class="speaker-title">Speaker</h3>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><p>Learn More</p></div>
+            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
             <button type="button" class="speaker-contact">Contact</button>
         </div>
     </div>

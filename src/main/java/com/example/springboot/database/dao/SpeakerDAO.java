@@ -9,5 +9,5 @@ import java.util.List;
 
 public interface SpeakerDAO  extends JpaRepository<Speaker, Long> {
     @Query("select s from Speaker s where s.id =:id")
-    List<Speaker> findById(Integer id);
+    Speaker findById(Integer id);
 }
