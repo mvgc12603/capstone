@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="021cef9c-cc5d-43bd-87ed-ac2765424ee7" name="capstone@localhost Mapping">
+      <data-sources db="62f530dd-619a-4862-8198-943d82c47a8c" />
+      <scope>
+        <node kind="schema" qname="capstone" />
+      </scope>
+    </mapping>
+  </component>
+</project>

@@ -1,0 +1,104 @@
+/*just for kicks background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);*/
+
+
+.navbar {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 100;
+    background-color: #faf3dd;
+    color: #08430a;
+    transition: all 0.5s;
+}
+
+/*Add padding*/
+.nav-item {
+    padding: 0.6em 2em;
+    position: relative;
+}
+
+.nav-link {
+    font-family: "Playfair Display", serif;
+    position: relative;
+    letter-spacing: .15rem;
+    font-weight: bold;
+    text-align: center; /* Center the text */
+}
+
+/*Navbar link color. Override Bootstrap w/ specificity*/
+.navbar-light .navbar-nav .nav-link {
+    color: #367d57;
+    font-size: large;
+    text-shadow: .01em .01em 1px #214a32;
+}
+
+/* Change style of links on hover */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ea1c2c;
+    text-decoration: underline solid;
+}
+
+
+/* DROPDOWN */
+/*Show the dropdown menu on hover*/
+.nav-link:hover + .dropdown-menu, .dropdown-menu:hover {
+    color: #ea1c2c;
+    display: block;
+    border: #faf3dd 5px;
+}
+
+/* Style for dropdown links */
+.dropdown-menu a {
+    color: #367d57;
+    font-size: 1em;
+    display: block;
+}
+
+/* Change style of dropdown links on hover */
+.dropdown-menu a:hover {
+    background-color: #faf6e8;
+    color: red;
+    font-size: 1.1em;
+}
+
+/*When navbar toggles to fullbar, add dropdown shadow*/
+@media (min-width: 992px) {
+    .dropdown-menu {
+        box-shadow: rgba(0, 0, 0, 0.2) -0px 15px 35px -20px;
+        background-color: #faf3dd;
+    }
+}
+
+/*When navbar toggles to hamburger*/
+@media (max-width: 992px) {
+    .dropdown-menu {
+        background-color: #faf6e8;
+        text-align: center; /* Center the text in the dropdown menu */
+    }
+}
+
+/*Login/Signup buttons*/
+#login-button {
+    position: relative;
+    width: 93px;
+    height: 40px;
+    border-radius: 25px;
+    margin-right: -39px;
+    font-size: 16px;
+    line-height: 1.5;
+    z-index: 5;
+    background-color: #7ca982;
+    /*!*7ca982, c8d5b9, 8fc0a9, faf3dd, 386641, 6a994e, 004d26, 367d57, 6b9e77, a9c17b, f0e07a *!*/
+}
+
+#signup-button {
+    position: relative;
+    width: 112px;
+    height: 40px;
+    background-color: #367d57;
+    color: #ffffff;
+    border-radius: 25px;
+    padding-left: 39px;
+    font-size: 16px;
+    line-height: 1.5;
+    z-index: 4;
+}
