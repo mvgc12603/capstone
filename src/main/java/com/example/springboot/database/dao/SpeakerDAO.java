@@ -10,4 +10,7 @@ import java.util.List;
 public interface SpeakerDAO  extends JpaRepository<Speaker, Long> {
     @Query("select s from Speaker s where s.id =:id")
     Speaker findById(Integer id);
+
+    @Query("select s from Speaker s")
+    List<Speaker> findAll();
 }

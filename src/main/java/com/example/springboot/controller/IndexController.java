@@ -14,6 +14,12 @@ public class IndexController {
         ModelAndView response = new ModelAndView("signup-login");
         return response;
     }
+
+    @GetMapping("/contact")
+    public ModelAndView contact() {
+        ModelAndView response = new ModelAndView("contact");
+        return response;
+    }
 }
 
 //

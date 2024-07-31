@@ -1,21 +1,32 @@
 package com.example.springboot.controller.resourceControllers;
 
+import com.example.springboot.database.dao.ResourceDAO;
+import com.example.springboot.database.entity.Resource;
+import com.example.springboot.database.entity.Speaker;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-  @Slf4j
-        @Controller
-        @RequestMapping("/resources")
-public class ResourceController {
+import java.util.List;
 
-        @GetMapping("/resource")
-        public ModelAndView index() {
-            ModelAndView response = new ModelAndView("resource");
-            return response;
-        }
+@Slf4j
+        @Controller
+        @RequestMapping("/resource")
+public class ResourceController {
+    @Autowired
+    private ResourceDAO resourceDAO;
+
+    @GetMapping("/")
+    public ModelAndView resource() {
+        ModelAndView response = new ModelAndView("/resource");
+        List<Resource> resource = resourceDAO.findAll();
+        response.addObject("resource", resource);
+        return response;
+    }
+
 
 
 ////

@@ -1,6 +1,6 @@
-
 <jsp:include page="../include/header.jsp"/>
 <link rel="stylesheet" href="/assets/css/speakers.css">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <section class="title-section">
     <div class="container">
@@ -13,94 +13,93 @@
 <section class="container speaker-container">
 
 
-    <div class="card">
-        <div class="container img-container">
-            <a href="">
-                <img class="card-img-top"
-                     src="https://images4.alphacoders.com/135/1351212.png"
-                     alt="Speaker"></a>
-        </div>
-        <div class="card-body">
-            <h3 class="speaker-title">Speaker</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
-<%--  How it should be done:          <a href="/employee/details?employeeId=${employee.id}">See Customers</a>--%>
-            <button type="button" class="speaker-contact">Contact</button>
-        </div>
-    </div>
+    <%--also how it should be done:--%>
+    <%--    <c:forEach items="${products}" var="product">--%>
+    <%--        <tr onclick="window.location.href = '/?id=${product.id}'" class="clickable-row">--%>
 
-<%--also how it should be done:--%>
-<%--    <c:forEach items="${products}" var="product">--%>
-<%--        <tr onclick="window.location.href = '/?id=${product.id}'" class="clickable-row">--%>
-<%--            <td>${product.id}</td>--%>
-<%--            <td>${product.productCode}</td>--%>
-<%--            <td>${product.productName}</td>--%>
-<%--            <td>${product.productDescription}</td>--%>
-<%--        </tr>--%>
-<%--    </c:forEach>--%>
+        <c:forEach items="${speakers}" var="speaker">
+            <div class="card">
+                <div class="container img-container">
+                    <img class="card-img-top"
+                         src="https://images4.alphacoders.com/135/1351212.png"
+                         alt="Speaker">
+                        <%--                <img class="event-image" src=${event.imageURL} alt="">--%>
+                </div>
+                <div class="card-body">
+                    <h3 class="speaker-title">${speaker.organization}</h3>
+                    <p class="card-text">${speaker.about}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
+                    <div class="speaker-details"><a href="/speakers/details?id=${speaker.id}">Learn More</a></div>
+                    <button type="button" class="speaker-contact">Contact</button>
+                </div>
+                </div>
+        </c:forEach>
 
-
-    <div class="card">
-        <div class="container img-container">
-            <a href="">
-                <img class="card-img-top"
-                     src="https://images4.alphacoders.com/135/1351212.png"
-                     alt="Speaker"></a>
-        </div>
-        <div class="card-body">
-            <h3 class="speaker-title">Speaker</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
-            <button type="button" class="speaker-contact">Contact</button>
-        </div>
-    </div>
+<%--    <div class="card">--%>
+<%--        <div class="container img-container">--%>
+<%--            <a href="">--%>
+<%--                <img class="card-img-top"--%>
+<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
+<%--                     alt="Speaker"></a>--%>
+<%--        </div>--%>
+<%--        <div class="card-body">--%>
+<%--            <h3 class="speaker-title">Speaker</h3>--%>
+<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
+<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
+<%--            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>--%>
+<%--            <button type="button" class="speaker-contact">Contact</button>--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
 
-    <div class="card">
-        <div class="container img-container">
-            <a href="">
-                <img class="card-img-top"
-                     src="https://images4.alphacoders.com/135/1351212.png"
-                     alt="Speaker"></a>
-        </div>
-        <div class="card-body">
-            <h3 class="speaker-title">Speaker</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>
-            <button type="button" class="speaker-contact">Contact</button>
-        </div>
-    </div>
+<%--    <div class="card">--%>
+<%--        <div class="container img-container">--%>
+<%--            <a href="">--%>
+<%--                <img class="card-img-top"--%>
+<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
+<%--                     alt="Speaker"></a>--%>
+<%--        </div>--%>
+<%--        <div class="card-body">--%>
+<%--            <h3 class="speaker-title">Speaker</h3>--%>
+<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
+<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
+<%--            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>--%>
+<%--            <button type="button" class="speaker-contact">Contact</button>--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
 
-    <div class="card">
-        <div class="container img-container">
-            <a href="">
-                <img class="card-img-top"
-                     src="https://images4.alphacoders.com/135/1351212.png"
-                     alt="Speaker"></a>
-        </div>
-        <div class="card-body">
-            <h3 class="speaker-title">Speaker</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><p>Learn More</p></div>
-            <button type="button" class="speaker-contact">Contact</button>
-        </div>
-    </div>
+<%--    <div class="card">--%>
+<%--        <div class="container img-container">--%>
+<%--            <a href="">--%>
+<%--                <img class="card-img-top"--%>
+<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
+<%--                     alt="Speaker"></a>--%>
+<%--        </div>--%>
+<%--        <div class="card-body">--%>
+<%--            <h3 class="speaker-title">Speaker</h3>--%>
+<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
+<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
+<%--            <div class="speaker-details"><p>Learn More</p></div>--%>
+<%--            <button type="button" class="speaker-contact">Contact</button>--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
 
-    <div class="card">
-        <div class="container img-container">
-            <a href="">
-                <img class="card-img-top"
-                     src="https://images4.alphacoders.com/135/1351212.png"
-                     alt="Speaker"></a>
-        </div>
-        <div class="card-body">
-            <h3 class="speaker-title">Speaker</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
-            <div class="speaker-details"><p>Learn More</p></div>
-            <button type="button" class="speaker-contact">Contact</button>
-        </div>
-    </div>
-</section>
-<jsp:include page="../include/footer.jsp" />
+<%--    <div class="card">--%>
+<%--        <div class="container img-container">--%>
+<%--            <a href="">--%>
+<%--                <img class="card-img-top"--%>
+<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
+<%--                     alt="Speaker"></a>--%>
+<%--        </div>--%>
+<%--        <div class="card-body">--%>
+<%--            <h3 class="speaker-title">Speaker</h3>--%>
+<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
+<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
+<%--            <div class="speaker-details"><p>Learn More</p></div>--%>
+<%--            <button type="button" class="speaker-contact">Contact</button>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</section>--%>
+<jsp:include page="../include/footer.jsp"/>

@@ -11,4 +11,7 @@ public interface ResourceDAO extends JpaRepository<Resource, Long>{
 
     @Query("select r from Resource r where r.type = :resources")
     List<Resource> findTypeResources(String resources);
+
+    @Query("select r from Resource r")
+    List<Resource> findAll();
 }

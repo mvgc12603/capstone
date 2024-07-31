@@ -24,8 +24,11 @@ public class SpeakerController {
     @GetMapping("/")
     public ModelAndView speaker() {
         ModelAndView response = new ModelAndView("speakers/speaker");
+        List<Speaker> speakers = speakerDAO.findAll();
+        response.addObject("speakers", speakers);
         return response;
     }
+
 
     @GetMapping("/details")
     public ModelAndView detail(@RequestParam Integer id) {
@@ -36,10 +39,30 @@ public class SpeakerController {
     }
 
     @GetMapping("/details/{id}")
-    public ModelAndView details(@PathVariable(name = "id") Integer id) {
+    public ModelAndView details(@PathVariable Integer id) {
         ModelAndView response = new ModelAndView("speakers/details");
         Speaker speaker = speakerDAO.findById(id);
         response.addObject("speaker", speaker);
         return response;
     }
+
+//    @GetMapping("/{id}")
+//    public ModelAndView eventDetails(@PathVariable Integer id){
+//        ModelAndView response = new ModelAndView("events/event-details");
+//
+//        response.addObject("id", id);
+//
+//        Event event = eventDAO.findById(id);
+//        response.addObject("event", event);
+//        Map<String,Object> eventDetails = eventDAO.getEventDetails(id);
+//        log.debug(eventDetails.toString());
+//        response.addObject("eventDetails", eventDetails);
+//
+//        EventSignUpFormBean form = new EventSignUpFormBean();
+//        response.addObject("form", form);
+//        log.debug(form.getFirstName());
+//
+//        return response;
+//    }
+
 }

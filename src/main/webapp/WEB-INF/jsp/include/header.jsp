@@ -34,7 +34,7 @@
                     <a class="nav-link text-center" href="/speakers/">Speakers</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-center" href="/resource" id="resourcesDropdown" role="button"
+                    <a class="nav-link dropdown-toggle text-center" href="/resource/" id="resourcesDropdown" role="button"
                        data-toggle="dropdown"> Resources </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/resources/water">Water</a>
@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="nav-item" >
-                    <a class="nav-link text-center" href="/">Contact</a>
+                    <a class="nav-link text-center" href="/contact">Contact</a>
                 </li>
             </ul>
 
