@@ -1,2 +1,4 @@
-package com.example.springboot.controller;public class ErrorController {
+package com.example.springboot.controller;
+
+public class ErrorController {
 }

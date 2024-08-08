@@ -38,13 +38,7 @@ public class SpeakerController {
         return response;
     }
 
-    @GetMapping("/details/{id}")
-    public ModelAndView details(@PathVariable Integer id) {
-        ModelAndView response = new ModelAndView("speakers/details");
-        Speaker speaker = speakerDAO.findById(id);
-        response.addObject("speaker", speaker);
-        return response;
-    }
+
 
 //    @GetMapping("/{id}")
 //    public ModelAndView eventDetails(@PathVariable Integer id){
@@ -54,7 +48,7 @@ public class SpeakerController {
 //
 //        Event event = eventDAO.findById(id);
 //        response.addObject("event", event);
-//        Map<String,Object> eventDetails = eventDAO.getEventDetails(id);
+//        Map<String,Object> eventDetails = eventDAO.getEventDetails(id); Amber is awesome wtf is happening
 //        log.debug(eventDetails.toString());
 //        response.addObject("eventDetails", eventDetails);
 //

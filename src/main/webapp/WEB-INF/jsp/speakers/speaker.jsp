@@ -31,75 +31,10 @@
                         Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
                     <div class="speaker-details"><a href="/speakers/details?id=${speaker.id}">Learn More</a></div>
                     <button type="button" class="speaker-contact">Contact</button>
+                    <div class="row">
+                    <button type="button" href="/speakers/edit">EDIT</button>
+                    </div>
                 </div>
                 </div>
         </c:forEach>
-
-<%--    <div class="card">--%>
-<%--        <div class="container img-container">--%>
-<%--            <a href="">--%>
-<%--                <img class="card-img-top"--%>
-<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
-<%--                     alt="Speaker"></a>--%>
-<%--        </div>--%>
-<%--        <div class="card-body">--%>
-<%--            <h3 class="speaker-title">Speaker</h3>--%>
-<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
-<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
-<%--            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>--%>
-<%--            <button type="button" class="speaker-contact">Contact</button>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-
-
-<%--    <div class="card">--%>
-<%--        <div class="container img-container">--%>
-<%--            <a href="">--%>
-<%--                <img class="card-img-top"--%>
-<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
-<%--                     alt="Speaker"></a>--%>
-<%--        </div>--%>
-<%--        <div class="card-body">--%>
-<%--            <h3 class="speaker-title">Speaker</h3>--%>
-<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
-<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
-<%--            <div class="speaker-details"><a href="/speakers/details?id=${speakers.id}">Learn More</a></div>--%>
-<%--            <button type="button" class="speaker-contact">Contact</button>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-
-
-<%--    <div class="card">--%>
-<%--        <div class="container img-container">--%>
-<%--            <a href="">--%>
-<%--                <img class="card-img-top"--%>
-<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
-<%--                     alt="Speaker"></a>--%>
-<%--        </div>--%>
-<%--        <div class="card-body">--%>
-<%--            <h3 class="speaker-title">Speaker</h3>--%>
-<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
-<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
-<%--            <div class="speaker-details"><p>Learn More</p></div>--%>
-<%--            <button type="button" class="speaker-contact">Contact</button>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-
-
-<%--    <div class="card">--%>
-<%--        <div class="container img-container">--%>
-<%--            <a href="">--%>
-<%--                <img class="card-img-top"--%>
-<%--                     src="https://images4.alphacoders.com/135/1351212.png"--%>
-<%--                     alt="Speaker"></a>--%>
-<%--        </div>--%>
-<%--        <div class="card-body">--%>
-<%--            <h3 class="speaker-title">Speaker</h3>--%>
-<%--            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis id laboriosam natus,--%>
-<%--                neque nihil ratione recusandae rerum sapiente tenetur totam?</p>--%>
-<%--            <div class="speaker-details"><p>Learn More</p></div>--%>
-<%--            <button type="button" class="speaker-contact">Contact</button>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</section>--%>
 <jsp:include page="../include/footer.jsp"/>

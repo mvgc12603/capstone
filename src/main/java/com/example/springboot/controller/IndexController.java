@@ -9,11 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
-    @GetMapping("/signup-login")
-    public ModelAndView index() {
-        ModelAndView response = new ModelAndView("signup-login");
-        return response;
-    }
+//    @GetMapping("/signup-login")
+//    public ModelAndView index() {
+//        ModelAndView response = new ModelAndView("signup-login");
+//        return response;
+//    }
 
     @GetMapping("/contact")
     public ModelAndView contact() {

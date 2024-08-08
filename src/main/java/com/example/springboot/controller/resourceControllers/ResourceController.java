@@ -13,17 +13,17 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Slf4j
-        @Controller
-        @RequestMapping("/resource")
+@Controller
+@RequestMapping("/resources")
 public class ResourceController {
     @Autowired
     private ResourceDAO resourceDAO;
 
     @GetMapping("/")
-    public ModelAndView resource() {
-        ModelAndView response = new ModelAndView("/resource");
-        List<Resource> resource = resourceDAO.findAll();
-        response.addObject("resource", resource);
+    public ModelAndView resources() {
+        ModelAndView response = new ModelAndView("resources");
+        List<Resource> resources = resourceDAO.findAll();
+        response.addObject("resources", resources);
         return response;
     }
 

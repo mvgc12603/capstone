@@ -1,0 +1,26 @@
+#main-wrapper {
+    padding-top: 3rem;
+    height: 1000px
+}
+
+
+.card-body{
+    height:40rem;
+    justify-content: center;
+}
+
+
+/*@media (width >= 992px)*/
+#login{
+    margin-left:50%;
+}
+
+.form-control{
+    width:70%;
+}
+
+.submit{
+background-color: #ea1c2c;
+    color: #faf3dd;
+  justify-self: center;
+}

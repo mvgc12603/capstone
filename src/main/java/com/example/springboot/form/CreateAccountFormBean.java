@@ -1,2 +1,19 @@
-package com.example.springboot.form;public class CreateAccountFormBean {
+package com.example.springboot.form;
+
+import jakarta.validation.constraints.*;
+import lombok.*;
+
+@Getter
+@Setter
+public class CreateAccountFormBean {
+
+    @NotEmpty
+    private String communityName;
+
+    @NotEmpty
+    private String email;
+
+    @NotEmpty
+    private String password;
+
 }

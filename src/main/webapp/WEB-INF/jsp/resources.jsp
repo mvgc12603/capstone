@@ -9,7 +9,7 @@
 <section class="title-section">
     <div class="container">
         <div class="row pt-5 pb-5">
-            <h1 class="text-center">Speakers</h1>
+            <h1 class="text-center">Resources</h1>
         </div>
     </div>
 </section>
@@ -21,7 +21,7 @@
     <%--    <c:forEach items="${products}" var="product">--%>
     <%--        <tr onclick="window.location.href = '/?id=${product.id}'" class="clickable-row">--%>
 
-    <c:forEach items="${resource}" var="resource">
+    <c:forEach items="${resources}" var="resource">
     <div class="card">
         <div class="container img-container">
             <img class="card-img-top"
@@ -38,4 +38,3 @@
 
 
     <jsp:include page="include/footer.jsp"/>
- 
