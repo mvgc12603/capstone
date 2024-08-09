@@ -15,7 +15,7 @@ import java.util.*;
 public class UserService {
 
     @Autowired
-    private UserDAO userDao;
+    private UserDAO userDAO;
 
     @Autowired
     private UserRoleDAO userRoleDao;
@@ -38,7 +38,7 @@ public class UserService {
 
 
         // save the user to the database
-        userDao.save(user);
+        userDAO.save(user);
 
         // create a user role for the user
         UserRole userRole = new UserRole();

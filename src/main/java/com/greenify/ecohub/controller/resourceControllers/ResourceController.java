@@ -21,7 +21,7 @@ public class ResourceController {
 
     @GetMapping("/")
     public ModelAndView resources() {
-        ModelAndView response = new ModelAndView("resources");
+        ModelAndView response = new ModelAndView("resources/resources");
         List<Resource> resources = resourceDAO.findAll();
         response.addObject("resources", resources);
         return response;

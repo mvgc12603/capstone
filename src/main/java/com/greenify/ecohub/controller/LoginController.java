@@ -24,7 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 
     @Autowired
-    private UserDAO userDao;
+    private UserDAO userDAO;
 
     @Autowired
     private UserService userService;

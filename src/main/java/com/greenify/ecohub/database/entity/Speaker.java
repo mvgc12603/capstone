@@ -3,6 +3,9 @@ package com.example.springboot.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.awt.*;
+import java.sql.Blob;
+
 @Getter
 @Setter
 @Entity
@@ -36,5 +39,9 @@ public class Speaker {
     @ToString.Exclude
     @JoinColumn(name = "about", nullable = true)
     private String about;
+
+    @ToString.Exclude
+    @JoinColumn(name = "speaker_img")
+    private String speakerImg;
 }
 
