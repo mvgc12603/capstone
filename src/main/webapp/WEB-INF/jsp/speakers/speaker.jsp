@@ -1,3 +1,4 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <jsp:include page="../include/header.jsp"/>
 <link rel="stylesheet" href="/assets/css/speakers.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -31,9 +32,12 @@
                         Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
                     <div class="speaker-details"><a href="/speakers/details?id=${speaker.id}">Learn More</a></div>
                     <button type="button" class="speaker-contact">Contact</button>
-                    <div class="row">
-                    <button type="button" href="/speakers/edit">EDIT</button>
+
+                    <sec:authorize access="hasAnyAuthority('ADMIN')">
+                    <div class="row-5">
+                    <button type="button" href="/speakers/edit" style="background-color: #ea1c2c; color:white">EDIT</button>
                     </div>
+                    </sec:authorize>
                 </div>
                 </div>
         </c:forEach>

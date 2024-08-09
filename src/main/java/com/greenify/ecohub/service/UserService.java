@@ -1,14 +1,14 @@
-package com.example.springboot.service;
+package com.greenify.ecohub.service;
 
-import com.example.springboot.database.dao.*;
-import com.example.springboot.database.entity.*;
-import com.example.springboot.form.*;
+import com.greenify.ecohub.database.dao.UserDAO;
+import com.greenify.ecohub.database.dao.UserRoleDAO;
+import com.greenify.ecohub.database.entity.User;
+import com.greenify.ecohub.database.entity.UserRole;
+import com.greenify.ecohub.form.CreateAccountFormBean;
 import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.crypto.password.*;
 import org.springframework.stereotype.*;
-
-import java.util.*;
 
 @Slf4j
 @Service

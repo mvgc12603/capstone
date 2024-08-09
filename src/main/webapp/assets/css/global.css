@@ -35,3 +35,13 @@ table thead{
 table tbody{
     color: white;
 }
+
+.resourceTypes-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.type-cards{
+    width: 0.5rem;
+    height: 0.5rem;
+}

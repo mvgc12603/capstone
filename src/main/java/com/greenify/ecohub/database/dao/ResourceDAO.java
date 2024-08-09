@@ -1,7 +1,7 @@
-package com.example.springboot.database.dao;
+package com.greenify.ecohub.database.dao;
 
 
-import com.example.springboot.database.entity.Resource;
+import com.greenify.ecohub.database.entity.Resource;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -12,6 +12,7 @@ public interface ResourceDAO extends JpaRepository<Resource, Long>{
     @Query("select r from Resource r where r.type = :resources")
     List<Resource> findTypeResources(String resources);
 
-    @Query("select r from Resource r")
-    List<Resource> findAll();
+    @Query("select distinct r.type from Resource r")
+    List<String> findResourceTypes();
+
 }

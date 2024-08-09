@@ -1,4 +1,4 @@
-package com.example.springboot.config;
+package com.greenify.ecohub.config;
 
 import org.springframework.context.annotation.*;
 import org.springframework.security.authentication.AuthenticationManager;

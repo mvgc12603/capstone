@@ -1,8 +1,9 @@
-package com.example.springboot.security;
+package com.greenify.ecohub.security;
 
-import com.example.springboot.database.dao.*;
-import com.example.springboot.database.entity.*;
-import com.example.springboot.database.entity.User;
+import com.greenify.ecohub.database.dao.UserDAO;
+import com.greenify.ecohub.database.dao.UserRoleDAO;
+import com.greenify.ecohub.database.entity.User;
+import com.greenify.ecohub.database.entity.UserRole;
 import lombok.extern.slf4j.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.security.core.*;

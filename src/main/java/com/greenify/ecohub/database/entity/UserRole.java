@@ -1,4 +1,4 @@
-package com.example.springboot.database.entity;
+package com.greenify.ecohub.database.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

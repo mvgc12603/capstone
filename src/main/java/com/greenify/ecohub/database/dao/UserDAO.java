@@ -1,6 +1,6 @@
-package com.example.springboot.database.dao;
+package com.greenify.ecohub.database.dao;
 
-import com.example.springboot.database.entity.*;
+import com.greenify.ecohub.database.entity.User;
 import org.springframework.data.jpa.repository.*;
 
 public interface UserDAO extends JpaRepository<User, Long> {

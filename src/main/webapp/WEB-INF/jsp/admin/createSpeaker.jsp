@@ -9,57 +9,108 @@
     </div>
 </section>
 
-<section>
-    <div class="container">
-<%--        <div class="row pt-5 justify-content-center">--%>
-<%--            <div class="col-auto justify-content-center">--%>
-<%--                <form class="card" style="width: 500px;" action="submit" method="post">--%>
-<%--                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>--%>
-<%--                    <div class="card-body p-3">--%>
-<%--                        <div>--%>
-<%--                            <label for="emailId" class="col-form-label">Email</label>--%>
-<%--                            <input type="text" id="emailId" name="email"--%>
-<%--                                   class="form-control <c:if test="${bindingResult.hasFieldErrors('email')}">is-invalid</c:if>"--%>
-<%--                                   value="${form.email}">--%>
-<%--                            <c:if test="${bindingResult.hasFieldErrors('email')}">--%>
-<%--                                <c:forEach items="${bindingResult.getFieldErrors('email')}" var="error">--%>
-<%--                                    <div class="text-danger">${error.defaultMessage}</div>--%>
-<%--                                </c:forEach>--%>
-<%--                            </c:if>--%>
-<%--                        </div>--%>
+<section class="container">
 
-<%--                        <div>--%>
-<%--                            <label for="firstName" class="col-form-label">First Name</label>--%>
-<%--                            <input type="text" id="firstName" name="firstname" class="form-control"--%>
-<%--                                   value="${form.firstname}">--%>
-<%--                        </div>--%>
-<%--                        <div>--%>
-<%--                            <label for="lastName" class="col-form-label">Last Name</label>--%>
-<%--                            <input type="text" id="lastName" name="lastname" class="form-control"--%>
-<%--                                   value="${form.lastname}">--%>
-<%--                        </div>--%>
-<%--                        <div>--%>
-<%--                            <label for="organization" class="col-form-label">Organization</label>--%>
-<%--                            <input type="text" id="organization" name="organization" class="form-control">--%>
-<%--                        </div>--%>
-<%--                        <div>--%>
-<%--                            <label for="title" class="col-form-label">Title</label>--%>
-<%--                            <input id="title" name="title" class="form-control">--%>
+    <form action="/createSpeaker" method="post"
+          enctype="multipart/form-data">
+                             <%--        CHANGE THIS ACTION --%>
+        <input type="hidden" name="id" value="${form.id}">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" name="name" value="${form.firstName}"
+                           placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="lastname">Lastname</label>
+                    <input type="text" id="lastname" name="name" value="${form.lastName}"
+                           placeholder="" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" value="${form.organization}"
+                           placeholder="" class="form-control">
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="form-group">
+                    <label for="speakerImg">Profile Image</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">../pub/assets/img/speakers/</span>
+                        </div>
+                        <input type="text" id="speakerImg" name="speakerImg" value="${form.imageURL}"
+                               class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" value="${form.title}"
+                           placeholder="" class="form-control">
+                </div>
+            </div>
 
-<%--                        </div>--%>
-<%--                        <div>--%>
-<%--                            <label for="about" class="col-form-label">About</label>--%>
-<%--                            <input type="text" id="about" name="extension" class="form-control">--%>
-<%--                        </div>--%>
-
-<%--                        <div class="mt-5">--%>
-<%--                            <button type="submit" class="btn btn-success w-100">Submit</button>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-    </div>
+            <div class="col-8">
+                <div class="form-group" style="padding-left: 1rem;">
+                    <label for="about">About</label>
+                    <textarea id="about" name="about"
+                              value="${form.about}"
+                              placeholder="" class="form-control">${form.about}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="submit">
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+        </div>
+    </form>
 </section>
 
+<style>
+    form {
+        font-family: "Blogger Sans";
+        letter-spacing: 1px;
+    }
+
+    .row {
+        margin: 2rem;
+    }
+
+
+    .form-check input {
+        margin-right: 0.6rem;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .submit-btn {
+        background-color: rgb(216, 67, 67);
+        color: rgb(243, 242, 232);
+        align-self: flex-end;
+        min-width: 200px;
+    }
+
+    .submit-btn:hover {
+        background-color: #e16d6d;
+        color: white;
+    }
+
+
+</style>
 <jsp:include page="../include/footer.jsp"/>

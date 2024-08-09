@@ -6,8 +6,9 @@
     <thead>
     <tr>
         <th>Type</th>
-        <th>Link</th>
         <th>Description</th>
+        <th>Link</th>
+
         <sec:authorize access="isAuthenticated()">
         <th>Save</th>
         </sec:authorize>
@@ -18,8 +19,8 @@
     <c:forEach items="${resource}" var="resource">
         <tr>
             <td>${resource.type}</td>
-            <td>${resource.link}</td>
             <td>${resource.description}</td>
+            <td>${resource.link}</td>
             <sec:authorize access="isAuthenticated()">
             <td class="text-center align-content-center"><button onclick="addToList()">+</button></td>
             </sec:authorize>

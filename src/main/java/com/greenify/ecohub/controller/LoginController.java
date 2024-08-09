@@ -1,9 +1,9 @@
-package com.example.springboot.controller;
+package com.greenify.ecohub.controller;
 
-import com.example.springboot.database.dao.UserDAO;
-import com.example.springboot.form.CreateAccountFormBean;
-import com.example.springboot.security.AuthenticatedUserUtilities;
-import com.example.springboot.service.UserService;
+import com.greenify.ecohub.database.dao.UserDAO;
+import com.greenify.ecohub.form.CreateAccountFormBean;
+import com.greenify.ecohub.security.AuthenticatedUserUtilities;
+import com.greenify.ecohub.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

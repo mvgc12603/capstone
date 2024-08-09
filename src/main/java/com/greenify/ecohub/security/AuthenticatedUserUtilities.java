@@ -1,7 +1,7 @@
-package com.example.springboot.security;
+package com.greenify.ecohub.security;
 
-import com.example.springboot.database.dao.UserDAO;
-import com.example.springboot.database.entity.User;
+import com.greenify.ecohub.database.dao.UserDAO;
+import com.greenify.ecohub.database.entity.User;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,7 @@
-package com.example.springboot.controller.resourceControllers;
+package com.greenify.ecohub.controller.resourceControllers;
 
-import com.example.springboot.database.dao.ResourceDAO;
-import com.example.springboot.database.entity.Resource;
-import com.example.springboot.database.entity.Speaker;
+import com.greenify.ecohub.database.dao.ResourceDAO;
+import com.greenify.ecohub.database.entity.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +21,7 @@ public class ResourceController {
     @GetMapping("/")
     public ModelAndView resources() {
         ModelAndView response = new ModelAndView("resources/resources");
-        List<Resource> resources = resourceDAO.findAll();
+        List<String> resources = resourceDAO.findResourceTypes();
         response.addObject("resources", resources);
         return response;
     }

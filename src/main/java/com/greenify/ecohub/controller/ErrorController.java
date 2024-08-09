@@ -1,4 +1,4 @@
-package com.example.springboot.controller;
+package com.greenify.ecohub.controller;
 
 public class ErrorController {
 }
