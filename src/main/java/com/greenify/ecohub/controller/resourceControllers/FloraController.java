@@ -21,8 +21,8 @@ public class FloraController {
     @GetMapping("/flora")
     public ModelAndView waterResources() {
         ModelAndView response = new ModelAndView("resources/flora");
-        List<Resource> resource = resourceDAO.findTypeResources("flora");
-        response.addObject("resource", resource);
+        List<Resource> resources = resourceDAO.findTypeResources("flora");
+        response.addObject("resources", resources);
         return response;
     }
 }

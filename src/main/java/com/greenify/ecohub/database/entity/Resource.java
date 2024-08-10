@@ -3,6 +3,10 @@ package com.greenify.ecohub.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity
@@ -17,16 +21,17 @@ public class Resource {
     @Column(name = "id")
     private Integer id;
 
-    @ToString.Exclude
-    // @EqualsAndHashCode.Exclude, is a thing that could be useful
-    @JoinColumn(name = "type", nullable = true)
+
+    @Column(name = "type")
     private String type;
 
-    @ToString.Exclude
-    @JoinColumn(name = "link", nullable = true)
+    @Column(name = "link")
     private String link;
 
-    @ToString.Exclude
-    @JoinColumn(name = "description", nullable = true)
+    @Column(name = "description")
     private String description;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "resource", fetch = FetchType.LAZY, cascade = CascadeType.ALL)// mappedBy is field in user resource
+    private List<UserResource> userResources;
 }

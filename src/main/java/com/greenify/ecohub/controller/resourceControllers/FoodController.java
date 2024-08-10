@@ -21,11 +21,11 @@ public class FoodController {
     @GetMapping("/food")
     public ModelAndView foodResources() {
         ModelAndView response = new ModelAndView("resources/food");
-        List<Resource> resource = resourceDAO.findTypeResources("food");
+        List<Resource> resources = resourceDAO.findTypeResources("food");
         //1st para is modelAndView
         // 2nd resource param linked to List<Resource> resource
 //        so adding value of resource list to the modelAndView attribute
-        response.addObject("resource", resource);
+        response.addObject("resources", resources);
         return response;
     }
 }

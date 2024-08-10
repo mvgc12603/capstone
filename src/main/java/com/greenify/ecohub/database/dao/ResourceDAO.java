@@ -15,4 +15,6 @@ public interface ResourceDAO extends JpaRepository<Resource, Long>{
     @Query("select distinct r.type from Resource r")
     List<String> findResourceTypes();
 
+    Resource findById(Integer id);
+
 }

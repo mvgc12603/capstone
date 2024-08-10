@@ -3,6 +3,9 @@ package com.greenify.ecohub.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Date;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 @Setter
 @Getter
@@ -25,4 +28,8 @@ public class User {
 
     @Column(name = "community_name")
     private String communityName;
+
+    @ToString.Exclude
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)// mappedBy is field in user resource
+    private List<UserResource> userResources;
 }

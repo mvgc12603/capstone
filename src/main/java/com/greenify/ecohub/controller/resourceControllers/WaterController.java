@@ -21,9 +21,9 @@ public class WaterController {
     @GetMapping("/water")
     public ModelAndView waterResources() {
         ModelAndView response = new ModelAndView("resources/water");
-        List<Resource> resource = resourceDAO.findTypeResources("water");
-        //2nd resource param linked to List<Resource> resource
-        response.addObject("resource", resource);
+        List<Resource> resources = resourceDAO.findTypeResources("water");
+        //1st is variable used in jsp(key) 2nd is the value passed
+        response.addObject("resources", resources);
         return response;
     }
 }

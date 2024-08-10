@@ -21,8 +21,8 @@ public class ConstructionController {
     @GetMapping("/construction")
     public ModelAndView constructionResources() {
         ModelAndView response = new ModelAndView("resources/construction");
-        List<Resource> resource = resourceDAO.findTypeResources("construction");
-        response.addObject("resource", resource);
+        List<Resource> resources = resourceDAO.findTypeResources("construction");
+        response.addObject("resources", resources);
         return response;
     }
 }

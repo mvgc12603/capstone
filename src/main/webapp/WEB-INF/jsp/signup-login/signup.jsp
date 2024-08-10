@@ -25,7 +25,7 @@
                         <label for="password1">Password</label>
                         <input type="password" name="password" class="form-control" id="password1">
                     </div>
-                    <button type="submit" class="btn submit">Sign Up</button>
+                    <button type="submit" class="btn submit"  onclick="alert('Welcome to Greenify')">Sign Up</button>
                 </form>
                 <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="/account/login"
                                                                                       class="text-primary ml-1">Log in.</a>

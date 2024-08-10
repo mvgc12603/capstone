@@ -68,9 +68,12 @@
 }
 
 .main-heading {
-    color: #181e4b;
-    font-family: "Grey Qo", cursive;
+    color: #004d26;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
     font-size: 8rem;
+    font-weight: 500;
+    font-style: normal;
 }
 
 

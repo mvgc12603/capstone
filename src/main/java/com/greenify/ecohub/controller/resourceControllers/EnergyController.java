@@ -2,6 +2,8 @@ package com.greenify.ecohub.controller.resourceControllers;
 
 import com.greenify.ecohub.database.dao.ResourceDAO;
 import com.greenify.ecohub.database.entity.Resource;
+import com.greenify.ecohub.database.entity.User;
+import com.greenify.ecohub.security.AuthenticatedUserUtilities;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,11 +20,18 @@ public class EnergyController {
     @Autowired
     private ResourceDAO resourceDAO;
 
+    @Autowired
+    private AuthenticatedUserUtilities authenticatedUserUtilities;
+
     @GetMapping("/energy")
     public ModelAndView energyResources() {
         ModelAndView response = new ModelAndView("resources/energy");
-        List<Resource> resource = resourceDAO.findTypeResources("energy");
-        response.addObject("resource", resource);
+        List<Resource> resources = resourceDAO.findTypeResources("energy");
+        response.addObject("resources", resources);
+        User user = authenticatedUserUtilities.getCurrentUser(); //gets logged in user
+//        response.addObject("user",user); would pass all info from user object
+        response.addObject("userId", user.getId());
+
         return response;
     }
 }

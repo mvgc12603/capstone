@@ -15,23 +15,24 @@
 
 
     <%--also how it should be done:--%>
-    <%--    <c:forEach items="${products}" var="product">--%>
     <%--        <tr onclick="window.location.href = '/?id=${product.id}'" class="clickable-row">--%>
 
         <c:forEach items="${speakers}" var="speaker">
+        <a href="/speakers/details?id=1">
             <div class="card">
-                <div class="container img-container">
+                <a class="container img-container">
                     <img class="card-img-top"
                          src="https://images4.alphacoders.com/135/1351212.png"
                          alt="Speaker">
                         <%--                <img class="event-image" src=${event.imageURL} alt="">--%>
-                </div>
+                </a>
                 <div class="card-body">
                     <h3 class="speaker-title">${speaker.organization}</h3>
                     <p class="card-text">${speaker.about}Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         Debitis id laboriosam natus, neque nihil ratione recusandae rerum sapiente tenetur totam?</p>
                     <div class="speaker-details"><a href="/speakers/details?id=${speaker.id}">Learn More</a></div>
-                    <button type="button" class="speaker-contact">Contact</button>
+                        <a href="/contact" type="submit" class="btn speaker-contact">Contact</a>
+
 
                     <sec:authorize access="hasAnyAuthority('ADMIN')">
                     <div class="row-5">
@@ -40,5 +41,6 @@
                     </sec:authorize>
                 </div>
                 </div>
+        </a>
         </c:forEach>
 <jsp:include page="../include/footer.jsp"/>

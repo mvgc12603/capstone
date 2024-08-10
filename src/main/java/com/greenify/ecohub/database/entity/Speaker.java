@@ -20,28 +20,22 @@ public class Speaker {
     @Column(name = "id")
     private Integer id;
 
-    @ToString.Exclude
-    @JoinColumn(name = "first_name", nullable = true)
+    @Column(name = "first_name")
     private String firstName;
 
-    @ToString.Exclude
-    @JoinColumn(name = "last_name", nullable = true)
+    @Column(name = "last_name")
     private String lastName;
 
-    @ToString.Exclude
-    @JoinColumn(name = "organization", nullable = true)
+    @Column(name = "organization", nullable = true)
     private String organization;
 
-    @ToString.Exclude
-    @JoinColumn(name = "title", nullable = true)
+    @Column(name = "title")
     private String title;
 
-    @ToString.Exclude
-    @JoinColumn(name = "about", nullable = true)
+    @Column(name = "about")
     private String about;
 
-    @ToString.Exclude
-    @JoinColumn(name = "speaker_img")
+    @Column(name = "speaker_img")
     private String speakerImg;
 }
 

@@ -15,14 +15,14 @@
     </tr>
     </thead>
     <tbody>
-
-    <c:forEach items="${resource}" var="resource">
+<%--1st is key (List<Resource> linked from controller), second is element--%>
+    <c:forEach items="${resources}" var="resource">
         <tr>
             <td>${resource.type}</td>
             <td>${resource.description}</td>
             <td>${resource.link}</td>
             <sec:authorize access="isAuthenticated()">
-            <td class="text-center align-content-center"><button onclick="addToList()">+</button></td>
+            <td class="text-center align-content-center"><a class="btn" href="/user/${userId}/resource/${resource.id}/add">+</a></td>
             </sec:authorize>
         </tr>
     </c:forEach>
