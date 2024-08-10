@@ -72,8 +72,8 @@ class GreenifyApplicationTests {
 
 	//DAO Test 2
 	@Test
-	public void findResourceByType(){
-		List<Resource> resources = resourceDAO.findTypeResources("Water");
+	public void findResourcesByType(){
+		List<Resource> resources = resourceDAO.findResourcesByType("Water");
 
 		resources.stream().forEach(resource -> {
 			assert "Water".equals(resource.getType()) : "Resource type is not Water";

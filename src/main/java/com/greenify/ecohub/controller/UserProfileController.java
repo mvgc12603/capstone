@@ -28,9 +28,8 @@ public class UserProfileController {
     public ModelAndView getUserProfile(){
         ModelAndView response = new ModelAndView("userProfile");
         Integer userId = authenticatedUserUtilities.getCurrentUser().getId();
-        List<UserResource> userResources = userResourceDAO.findByUserId(userId);
 
-        response.addObject("userResources", userResources);
+        List<UserResource> userResources = userResourceDAO.findByUserId(userId);
 
 //        Alternative to:
 //        User user = authenticatedUserUtilities.getCurrentUser();
@@ -39,6 +38,7 @@ public class UserProfileController {
 //        Or:
 //        List<UserResource> userResources = userResourceDAO.findByUserId(authenticatedUserUtilities.getCurrentUser().getId());
 
+        response.addObject("userResources", userResources);
         return response;
     }
 }

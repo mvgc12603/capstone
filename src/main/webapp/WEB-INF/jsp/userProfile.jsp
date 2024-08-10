@@ -3,15 +3,29 @@
 
 <h1 class="page-title">This is user profile JSP page</h1>
 
-<h3> Saved Resources:
 
-<c:forEach items="${userResources}" var="userResource">
-    ${userResource.resource.id}
-    ${userResource.resource.description}
-    ${userResource.resource.link}
-</c:forEach>
-</h3>
 
+<div class="table-container">
+    <h3> Saved Resources: </h3>
+    <table class="table table-hover table-bordered">
+<thead>
+<tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Link</th>
+</tr>
+</thead>
+<tbody>
+    <c:forEach items="${userResources}" var="userResource">
+        <tr>
+            <td>${userResource.resource.type}</td>
+            <td>${userResource.resource.description}</td>
+            <td>${userResource.resource.link}</td>
+        </tr>
+    </c:forEach>
+</tbody>
+    </table>
+</div>
 <h3>Contacted Speakers: </h3>
 <jsp:include page="include/footer.jsp" />
 

@@ -26,7 +26,7 @@ public class UserResourceController {
     @Autowired
     private UserResourceDAO userResourceDAO;
 
-    @GetMapping("/user/{userId}/resource/{resourceId}/add") //{} creates a pathvariable, any value can be passed in
+    @GetMapping("/user/{userId}/resource/{resourceId}/add") //{} creates a path variable, any value can be passed in
     public ModelAndView addUserResource(@PathVariable Integer userId, @PathVariable Integer resourceId){
         ModelAndView response = new ModelAndView();
         User user = userDAO.findById(userId);

@@ -2,6 +2,14 @@
 <link rel="stylesheet" href="/assets/css/speakers.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<section class="title-section">
+    <div class="container">
+        <div class="row pt-5 pb-5">
+            <h1 class="text-center">Resources</h1>
+        </div>
+    </div>
+</section>
+
 <div class="container-fluid resourceTypes-container">
 <c:forEach items="${resources}" var="resource">
     <div class="card">

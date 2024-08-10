@@ -10,7 +10,7 @@ import java.util.List;
 public interface ResourceDAO extends JpaRepository<Resource, Long>{
 
     @Query("select r from Resource r where r.type = :resources")
-    List<Resource> findTypeResources(String resources);
+    List<Resource> findResourcesByType(String resources);
 
     @Query("select distinct r.type from Resource r")
     List<String> findResourceTypes();
