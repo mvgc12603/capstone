@@ -11,22 +11,28 @@
 
 <section class="container">
 
-    <form action="/createSpeaker" method="post"
-          enctype="multipart/form-data">
-                             <%--        CHANGE THIS ACTION --%>
+    <form action="/admin/createSpeaker" method="post">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <input type="hidden" name="id" value="${form.id}">
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
-                    <label for="firstname">Firstname</label>
-                    <input type="text" id="firstname" name="name" value="${form.firstName}"
+                    <label for="firstName">Firstname</label>
+                    <input type="text" id="firstName" name="firstName" value="${form.firstName}"
                            placeholder="" class="form-control">
+                    <c:if test="${bindingResult.hasFieldErrors('firstName')}">is-invalid</c:if>
+                    <c:if test="${bindingResult.hasFieldErrors('firstName')}">
+                        <c:forEach items="${bindingResult.getFieldErrors('firstName')}" var="error">
+                            <small id="emailHelp" class="form-text text-danger">${error.defaultMessage}</small>
+                        </c:forEach>
+                    </c:if>
+
                 </div>
             </div>
             <div class="col-6">
                 <div class="form-group">
-                    <label for="lastname">Lastname</label>
-                    <input type="text" id="lastname" name="name" value="${form.lastName}"
+                    <label for="lastName">Lastname</label>
+                    <input type="text" id="lastName" name="lastName" value="${form.lastName}"
                            placeholder="" class="form-control">
                 </div>
             </div>
@@ -44,9 +50,9 @@
                     <label for="speakerImg">Profile Image</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">../pub/assets/img/speakers/</span>
+                            <span class="input-group-text">../assets/img/speakers/</span>
                         </div>
-                        <input type="text" id="speakerImg" name="speakerImg" value="${form.imageURL}"
+                        <input type="text" id="speakerImg" name="speakerImg" value="${form.speakerImg}"
                                class="form-control">
                     </div>
                 </div>
@@ -70,6 +76,10 @@
                 </div>
             </div>
         </div>
+            <div id="confirmation">
+            <input type="checkbox" id="agree" name="scales" checked/>
+            <label for="agree">Are you sure?</label>
+        </div>
         <div class="row">
             <div class="submit">
                 <button type="submit" class="btn submit-btn">Submit</button>
@@ -91,6 +101,16 @@
 
     .form-check input {
         margin-right: 0.6rem;
+    }
+
+    #confirmation{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #agree{
+        margin-right: 10px;
     }
 
     .submit {

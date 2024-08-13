@@ -6,63 +6,27 @@
     padding: 0 0 100px 80px;
 }
 
-
 .hero-section {
-    align-self: end;
-    width: 100%;
-    max-width: 1292px;
-}
-
-@media (max-width: 991px) {
-    .hero-section {
-        max-width: 100%;
-    }
-}
-
-.hero-content {
     display: flex;
-}
-
-@media (max-width: 991px) {
-    .hero-content {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-    }
+    padding-bottom: 6.5rem;
 }
 
 .hero-text {
     display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 40%;
-    margin-left: 0;
 }
 
-@media (max-width: 991px) {
-    .hero-text {
-        width: 100%;
-    }
-}
 
 .hero-text-content {
     display: flex;
     margin-top: 10rem;
-    width: 100%;
     flex-direction: column;
     align-items: start;
     font-weight: 700;
 }
 
-@media (max-width: 991px) {
-    .hero-text-content {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-}
 
 .tagline {
-    color: #df6951;
+    color: #004d26;
     text-transform: uppercase;
     font: 20px Poppins, sans-serif;
 }
@@ -74,13 +38,9 @@
     font-size: 8rem;
     font-weight: 500;
     font-style: normal;
-}
-
-
-@media (max-width: 991px) {
-    .main-heading {
-        font-size: 40px;
-    }
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 1),
+    5px 4px 0px rgba(0, 0, 0, 0.15);
+    /*ooooh prettyy*/
 }
 
 .description {
@@ -90,12 +50,6 @@
     font: 500 16px/30px Poppins, sans-serif;
 }
 
-@media (max-width: 991px) {
-    .description {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-}
 
 .cta-container {
     display: flex;
@@ -111,52 +65,16 @@
     color: #fff;
     text-align: center;
     padding: 19px 27px;
-    font: 18px Google Sans, sans-serif;
 }
 
-@media (max-width: 991px) {
-    .cta-button {
-        padding: 0 20px;
-    }
+.hero-section {
+    background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/1d0de5acaaf74bbc6379054ea04d466a6eb2e9cc000d7ac4c82bbade1026da79?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
-.play-demo {
-    display: flex;
-    gap: 21px;
-    color: #686d77;
-    margin: auto 0;
-    font: 17px Poppins, sans-serif;
-}
-
-.hero-image {
-    display: flex;
-    flex-direction: column;
-    line-height: normal;
-    width: 60%;
-    margin-left: 20px;
-}
-
-@media (max-width: 991px) {
-    .hero-image {
-        width: 100%;
-    }
-}
-
-.hero-img {
-    aspect-ratio: 0.97;
-    object-fit: contain;
-    object-position: center;
-    width: 100%;
-}
-
-@media (max-width: 991px) {
-    .hero-img {
-        max-width: 100%;
-        margin-top: 40px;
-    }
-}
-
-.benefits-section {
+.benefits-header-container {
     align-self: end;
     display: flex;
     width: 783px;
@@ -176,7 +94,7 @@
 }
 
 .benefits-header {
-    align-self: start;
+    align-self: center;
     display: flex;
     margin-top: 8px;
     flex-direction: column;
@@ -188,17 +106,13 @@
     }
 }
 
-.benefits-category {
-    color: #5e6282;
-    align-self: center;
-    font: 600 18px Poppins, sans-serif;
-}
 
 .benefits-title {
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
     color: #14183e;
     text-transform: capitalize;
     margin-top: 10px;
-    font: 700 50px Volkhov, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -250,11 +164,6 @@
     margin-left: 0;
 }
 
-@media (max-width: 991px) {
-    .service-item {
-        width: 100%;
-    }
-}
 
 .service-content {
     display: flex;
@@ -300,16 +209,11 @@
     margin-left: 20px;
 }
 
-@media (max-width: 991px) {
-    .featured-service {
-        width: 100%;
-    }
-}
 
 .featured-service-content {
     border-radius: 36px;
-    background: #fff;
-    box-shadow: 0 100px 80px 0 rgba(0, 0, 0, 0.02), 0 64.815px 46.852px 0 rgba(0, 0, 0, 0.02), 0 38.519px 25.481px 0 rgba(0, 0, 0, 0.01), 0 20px 13px 0 rgba(0, 0, 0, 0.01), 0 8.148px 6.519px 0 rgba(0, 0, 0, 0.01), 0 1.852px 3.148px 0 rgba(0, 0, 0, 0);
+    background: #b5cca7;
+    box-shadow: 0 20px 13px rgba(0, 0, 0, 0.01), 0 8px 6px rgba(0, 0, 0, 0.01), 0 2px 3px rgba(0, 0, 0, 0);
     display: flex;
     flex-grow: 1;
     flex-direction: column;

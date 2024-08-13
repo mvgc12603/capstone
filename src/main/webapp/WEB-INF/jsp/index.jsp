@@ -2,81 +2,90 @@
 <link rel="stylesheet" href="/assets/css/index.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Merienda:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Merienda:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 
 <body>
-<section class="landingPage">
-    <div class="hero-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-text-content">
-                    <p class="tagline">Your hub for sustainable communities</p>
-                    <h1 class="main-heading">Greenify</h1>
-                    <p class="description">Built Wicket longer admire do barton vanity itself do in it. Preferred to
-                        sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-                    <div class="cta-container">
-                        <a href="#" class="cta-button">Find out more</a>
-                        <div class="play-demo"></div>
-                    </div>
+<div class="fluid-container landingPage">
+    <div class="row justify-content-between hero-section">
+        <div class="col-md-7 hero-text">
+            <div class="hero-text-content">
+                <p class="tagline">Your hub for sustainable communities</p>
+                <h1 class="main-heading">Greenify</h1>
+                <p class="description">Greenify is your centralized guide for creating environmentally friendly,
+                    thriving neighborhoods.
+                    <br>We provide free resources, connect you with local programs, and offer consultants to help
+                    transform your community.</p>
+                <div class="cta-container">
+                    <a href="#" class="cta-button">Find out more</a>
+                    <div class="play-demo"></div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img loading="lazy"
-                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d0de5acaaf74bbc6379054ea04d466a6eb2e9cc000d7ac4c82bbade1026da79?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                     class="hero-img" alt="Travel illustration"/>
+        </div>
+        <div class="background">
+        </div>
+    </div>
+
+
+    <div class="container-fluid benefits-header">
+        <div class="row justify-content-between">
+            <div class="col-5 benefits-header justify-content-between">
+                <h2 class="benefits-title">Benefits</h2>
             </div>
+            <img loading="lazy"
+                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/85131a20f7284746a1d8df8492f3d4c94c52a39e5b0d0383b596ba469cafb2f1?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
+                 class="col-2 benefits-image"/>
         </div>
     </div>
-    <div class="benefits-section">
-        <div class="benefits-header">
-            <p class="benefits-category">CATEGORY</p>
-            <h2 class="benefits-title">Benefits</h2>
-        </div>
-        <img loading="lazy"
-             src="https://cdn.builder.io/api/v1/image/assets/TEMP/85131a20f7284746a1d8df8492f3d4c94c52a39e5b0d0383b596ba469cafb2f1?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-             class="benefits-image" alt="Benefits illustration"/>
-    </div>
+
+
+    <%--    Energy Savings: Sustainable practices lower energy consumption, leading to substantial cost savings over time.--%>
+    <%--    Brand Reputation: Being eco-friendly enhances brand image, attracting more customers and investors.--%>
+    <%--    Regulatory Compliance: Staying ahead of environmental regulations avoids fines and legal issues.--%>
+    <%--    Employee Attraction: Green initiatives attract top talent who value sustainability, improving workforce quality.--%>
+    <%--    Long-term Investment: Sustainable practices ensure long-term viability and profitability of communities--%>
+
     <div class="services-section">
         <div class="services-container">
             <div class="service-item">
                 <div class="service-content">
                     <img loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/a64beaf45f7d41dfb9309d26741ec8c04655a77d8528056c5fa89007573b15de?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                         class="service-icon" alt="Calculated Weather icon"/>
-                    <h3 class="service-title">Calculated Weather</h3>
-                    <p class="service-description">Built Wicket longer admire do barton vanity itself do in it.</p>
+                         src=""
+                         class="benefit-icon" alt=""/>
+                    <h3 class="service-title">Tax Incentives</h3>
+                    <p class="service-description">Get certified, enjoy tax deductions and rebates</p>
                 </div>
             </div>
             <div class="featured-service">
                 <div class="featured-service-content">
                     <div class="featured-service-title">
                         <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/40aa37263846f298a4c81878ea8db1e2e6a1d929d2803e0455d49be6a7647b19?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                             class="featured-service-icon" alt="Best Flights icon"/>
-                        Best Flights
+                             src=""
+                             class="featured-benefit-icon" alt=""/>
+                        Market Value
                     </div>
-                    <p class="featured-service-description">Engrossed listening. Park gate sell they west hard for
-                        the.</p>
+                    <p class="featured-service-description">Buyers increasingly prefer greener communities</p>
                 </div>
             </div>
-            <div class="service-item">
+            <div class="benefit-item">
                 <div class="service-content">
                     <img loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f01d06ae5e439fcfc50be4222cfcf55a4eb2990938742325317e702a0fa80dd?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
+                         src=""
                          class="service-icon" alt="Local Events icon"/>
-                    <h3 class="service-title">Local Events</h3>
-                    <p class="service-description">Barton vanity itself do in it. Preferd to men it engrossed
-                        listening.</p>
+                    <h3 class="service-title"> Operational Efficiency</h3>
+                    <p class="service-description">Lower your water, energy, and gardening expenses</p>
                 </div>
             </div>
-            <div class="service-item">
+            <div class="benefit-item">
                 <div class="service-content">
                     <img loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/7655659d4ac4b21c757ed8c2b1b1d0dfed9fde01358fe0387db1b454f4517700?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
+                         src=""
                          class="service-icon" alt="Customization icon"/>
-                    <h3 class="service-title">Customization</h3>
-                    <p class="service-description">We deliver outsourced aviation services for military customers</p>
+                    <h3 class="service-title">Long-Term Investment</h3>
+                    <p class="service-description">Sustainable practices ensure long-term viability, and
+                        profitability.</p>
                 </div>
             </div>
         </div>
@@ -89,33 +98,29 @@
                 <div class="booking-steps-content">
                     <h2 class="booking-steps-title">Book a speaker for your community</h2>
                     <div class="step">
-                        <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/73a1a17f2be0c6f5548f69ac1e250adf0094f432dc704ca64f660d7fd681c0ae?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                             class="step-icon" alt="Choose Destination icon"/>
+                        <span class="material-symbols-outlined">search</span>
                         <div class="step-content">
-                            <h3 class="step-title">Choose Destination</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Urna, tortor tempus.</p>
+                            <h3 class="step-title">Browse Speakers</h3>
+                            <p class="step-description">Browse our list of expert speakers spanning various fields.</p>
                         </div>
                     </div>
                     <div class="step">
-                        <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/03d7955ff746f437ded380636ef1e62802c102f8ffa7ce1381e6cb3d6153fb31?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                             class="step-icon" alt="Make Payment icon"/>
+                        <span class="material-symbols-outlined">
+select_all
+</span>
                         <div class="step-content">
-                            <h3 class="step-title">Make Payment</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Urna, tortor tempus.</p>
+                            <h3 class="step-title">Select a Speaker</h3>
+                            <p class="step-description">Contact us to schedule a presentation.</p>
                         </div>
                     </div>
                     <div class="step">
-                        <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ab108e9d449a018d918072838cbd34ea6be5c69bfca8f0f771bff14668eb7e0?placeholderIfAbsent=true&apiKey=a1811025a09c4cc9b605f3a4595fed06"
-                             class="step-icon" alt="Reach Airport icon"/>
+                        <span class="material-symbols-outlined">
+sentiment_satisfied
+</span>
                         <div class="step-content">
-                            <h3 class="step-title">Reach Airport on Selected Date</h3>
-                            <p class="step-description">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Urna, tortor tempus.</p>
+                            <h3 class="step-title">We'll handle the rest!</h3>
+                            <p class="step-description">We ensure seamless communication with our experts, so you can
+                                host informative and inspirational events. </p>
                         </div>
                     </div>
                 </div>
@@ -157,7 +162,8 @@
     <div class="row resource-section">
         <div class="resource-container">
 
-</section>
+        </div>
+    </div>
 
 
 <jsp:include page="include/footer.jsp"/>

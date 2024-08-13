@@ -5,10 +5,10 @@
 
 
 
-<div id="main-wrapper" class="container" style="background: #467678;">
-    <div class="row" style="background: violet;">
-        <div class="col-md-6 g-0" id="signup" style="background: lightgoldenrodyellow;">
-            <div class="card-body form-container p-5" style="background: #aedfe4; ">
+<div id="main-wrapper" class="container">
+    <div class="row" style="background: #8fc0a9;">
+        <div class="col-md-6 g-0" id="signup">
+            <div class="card-body form-container p-5" style="background: #7ca982; ">
                 <h2 class="font-weight-bold text-theme">Sign Up</h2>
                 <p class="text-muted mt-2 mb-5">Sign up by entering your email address and password.</p>
                 <form autocomplete="off" action="/account/create-account" method="post">

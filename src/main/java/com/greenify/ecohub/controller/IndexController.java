@@ -1,28 +1,37 @@
 package com.greenify.ecohub.controller;
 
+import com.greenify.ecohub.database.dao.SpeakerDAO;
+import com.greenify.ecohub.database.entity.Speaker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 public class IndexController {
 
-//    @GetMapping("/signup-login")
-//    public ModelAndView index() {
-//        ModelAndView response = new ModelAndView("signup-login");
-//        return response;
-//    }
+
+    private final SpeakerDAO speakerDAO;
+
+    public IndexController(SpeakerDAO speakerDAO) {
+        this.speakerDAO = speakerDAO;
+    }
 
     @GetMapping("/contact")
     public ModelAndView contact() {
         ModelAndView response = new ModelAndView("contact");
+        List<Speaker> speakers = speakerDAO.findAll();
+        response.addObject("speakers", speakers);
         return response;
     }
 }
 
-//
+
+
+
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Controller;

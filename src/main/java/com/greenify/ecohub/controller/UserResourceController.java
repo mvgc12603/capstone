@@ -26,17 +26,33 @@ public class UserResourceController {
     @Autowired
     private UserResourceDAO userResourceDAO;
 
-    @GetMapping("/user/{userId}/resource/{resourceId}/add") //{} creates a path variable, any value can be passed in
-    public ModelAndView addUserResource(@PathVariable Integer userId, @PathVariable Integer resourceId){
+    //when add btn clicked, this controller handles it
+    @GetMapping("/user/{userId}/resource/{resourceId}/add")
+    public ModelAndView addUserResource(@PathVariable Integer userId, @PathVariable Integer resourceId) {
         ModelAndView response = new ModelAndView();
         User user = userDAO.findById(userId);
         Resource resource = resourceDAO.findById(resourceId);
-        UserResource userResource = new UserResource();
-        userResource.setUser(user);
-        //        userResource.setUserId(userId); would not work because of "insertable = false, updatable = false" in entity
-        userResource.setResource(resource);
 
-        userResourceDAO.save(userResource); //creates a userResource, with an AI id
+        // Check if the UserResource already exists
+        UserResource existingUserResource = userResourceDAO.findByUserIdAndResourceId(userId, resourceId);
+        if (existingUserResource == null) {
+            UserResource userResource = new UserResource();
+            userResource.setUser(user);
+            userResource.setResource(resource);
+
+            userResourceDAO.save(userResource);
+            response.setViewName("redirect:/user/profile");// Creates a new UserResource
+        }
+        String type = resource.getType();
+        response.setViewName("redirect:/resources/" + type.toLowerCase());
+        return response;
+    }
+
+    @GetMapping("/user/{id}/remove") //{} creates a path variable, any value can be passed in
+    public ModelAndView removeUserResource(@PathVariable Integer id){
+        ModelAndView response = new ModelAndView();
+        UserResource userResource = userResourceDAO.findById(id);
+        userResourceDAO.delete(userResource); //deletes a userResource by its id
         response.setViewName("redirect:/user/profile");
         return response;
     }

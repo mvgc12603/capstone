@@ -3,7 +3,6 @@ package com.greenify.ecohub.controller;
 import com.greenify.ecohub.database.dao.SpeakerDAO;
 import com.greenify.ecohub.database.entity.Speaker;
 import com.greenify.ecohub.database.entity.User;
-import com.greenify.ecohub.form.CreateAccountFormBean;
 import com.greenify.ecohub.form.CreateSpeakerFormBean;
 import com.greenify.ecohub.security.AuthenticatedUserUtilities;
 import com.greenify.ecohub.service.SpeakerService;
@@ -52,7 +51,7 @@ public class AdminController {
     @GetMapping("/createSpeaker")
     public ModelAndView createSpeaker() {
         ModelAndView response = new ModelAndView("admin/createSpeaker");
-        response.addObject("imgURL", dir + "speakers/"); //idk??
+        response.addObject("speakerImg", dir + "speakers/"); //idk??
         return response;
     }
 
@@ -73,8 +72,8 @@ public class AdminController {
             if (speaker == null) {
                 speaker = new Speaker();
             }
-            speaker = speakerService.createSpeaker(form, speaker);
-            response.setViewName("redirect:/speakers/speaker");
+            speakerService.createSpeaker(form, speaker);
+            response.setViewName("redirect:/speakers/");
         }
         return response;
     }

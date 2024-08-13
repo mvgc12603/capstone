@@ -8,4 +8,8 @@ import java.util.List;
 public interface UserResourceDAO extends JpaRepository<UserResource, Long> {
 
     List<UserResource> findByUserId(Integer userId);
+
+    UserResource findById(Integer id);
+
+    UserResource findByUserIdAndResourceId(Integer userId, Integer resourceId);
 }

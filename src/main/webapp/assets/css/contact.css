@@ -142,6 +142,13 @@ textarea.input {
     transform: translateY(0);
 }
 
+legend, label{
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 .submit-button {
     padding: 0.6rem 1.3rem;
     background-color: #fff;

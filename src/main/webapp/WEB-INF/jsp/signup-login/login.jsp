@@ -5,12 +5,10 @@
 
 
 
-<div id="main-wrapper" class="container" style="background: #467678;">
-    <div class="row" style="background: violet;">
-
-
-        <div class="col-md-6 g-0" id="login" style="background: #9ae9ed">
-            <div class="card-body form-container p-5" style="background: #cdbeed; ">
+<div id="main-wrapper" class="container">
+    <div class="row" style="background: #8fc0a9;">
+        <div class="col-md-6 g-0" id="login" >
+            <div class="card-body form-container p-5" style="background: #7ca982; ">
                 <h2 class="font-weight-bold text-theme">Login</h2>
                 <p class="text-muted mt-2 mb-5">Log in by entering your email address and password.</p>
                 <form action="/account/loginSubmit" method="post">

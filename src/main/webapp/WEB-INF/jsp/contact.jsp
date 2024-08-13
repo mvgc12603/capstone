@@ -58,7 +58,7 @@
                 </div>
                 <div class="input-container">
                     <input type="email" name="email" class="input" />
-                    <label>Email</label>
+                    <label>Email*</label>
                     <span>Email</span>
                 </div>
                 <div class="input-container">
@@ -66,35 +66,45 @@
                     <label>Phone</label>
                     <span>Phone</span>
                 </div>
+                <fieldset>
+                    <legend>Select your preferred contact method:</legend>
+                    <div>
+                        <input type="radio" id="contactChoice1" name="contact" value="email" />
+                        <label for="contactChoice1">Email</label>
+                        <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                        <label for="contactChoice2">Phone</label>
+                    </div>
+                </fieldset>
                 <div class="input-container">
                     <input type="text" name="community" class="input" maxlength="40"/>
-                    <label>Community Name</label>
+                    <label>Community Name*</label>
                     <span>Community Name</span>
                 </div>
                 <div class="input-container">
                     <input type="text" name="role" class="input" maxlength="30">
-                    <label>Your Role</label>
-                    <span>Your Role</span>
+                    <label>Role*</label>
+                    <span>Role</span>
                 </div>
                 <div class="input-container textarea">
                     <textarea name="message" class="input"></textarea>
-                    <label>Message</label>
+                    <label>Message*</label>
                     <span>Message</span>
                 </div>
                 <label for="speakerId" class="col-form-label">
-                If interested in a speaker, please select from the following:</label>
+                    If interested in a speaker, please select from the following:
+                </label>
                 <div class="input-container">
-                    <select id="speakerId" name="speakerId" class="form-control">
-                <c:forEach items="${speakers}" var="speaker">
-                    <option value="${speaker.id}">${speaker.firstName} ${speaker.lastName}</option>
-                </c:forEach>
+                    <select id="speakerId" name="speakerId" class="form-select">
+                        <option disabled selected value>-- Select a Speaker --</option>
+                        <c:forEach items="${speakers}" var="speaker">
+                            <option value="${speaker.id}">${speaker.firstName} ${speaker.lastName}</option>
+                        </c:forEach>
                     </select>
                 </div>
                 <input type="submit" value="Send" class="btn submit-button" />
             </form>
         </div>
     </div>
-
 
 </body>
 </html>
